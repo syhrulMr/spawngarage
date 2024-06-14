@@ -1,0 +1,151 @@
+/* hero */
+.hero {
+  height: 100%;
+  width: 100%;
+}
+/* end */
+
+/* SLIDER FOTO */
+.all-slider {
+  box-sizing: border-box;
+}
+
+.body-slider {
+    display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.slider {
+  position: relative;
+  max-width: 100%; /* Atur lebar maksimal slider */
+  width: 100%;
+  overflow: hidden;
+  border-radius: 10px;
+}
+
+.slides {
+  display: flex;
+  transition: transform 0.5s ease-in-out;
+}
+
+.slide {
+  flex: 0 0 30%; /* Set lebar minimum gambar 50% dari lebar slider */
+  transition: opacity 0.5s ease;
+}
+
+.slide img {
+  width: 100%; /* Gambar mengisi lebar kontainer slide */
+  display: block;
+  border-radius: 10px;
+}
+
+.prev,
+.next {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: rgba(0, 0, 0, 0.5);
+  color: white;
+  border: none;
+  padding: 10px;
+  cursor: pointer;
+  border-radius: 50%;
+  user-select: none;
+}
+
+.prev {
+  left: 10px;
+}
+
+.next {
+  right: 10px;
+}
+
+.prev:hover,
+.next:hover {
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+/* Media query untuk perangkat mobile */
+@media (max-width: 768px) {
+  .slide {
+    flex: 0 0 100%; /* Set lebar minimum gambar 100% pada perangkat mobile */
+  }
+}
+
+
+/* end */
+
+/* VALORANT BTN */
+.all-btn,
+.all-btn::before,
+.al-btn::after {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+.body-btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.btn-val {
+  border: 0;
+  cursor: pointer;
+  position: relative;
+}
+
+.btn-val div {
+  background-color: rgb(255, 70, 85);
+  padding: 8px 28px;
+  position: relative;
+  overflow: hidden;
+}
+
+.btn-val a {
+  position: relative;
+  text-decoration: none;
+  color: white;
+  text-transform: uppercase;
+  z-index: 2;
+}
+
+.btn-val::before,
+.btn-val::after {
+  content: "";
+  position: absolute;
+  width: 105%;
+  height: 50%;
+  background-color: transparent;
+  border: 1px solid rgb(134, 129, 124);
+  left: -2.5%;
+  z-index: -1;
+}
+
+.btn-val::before {
+  border-bottom: 0;
+  top: -10%;
+}
+
+.btn-val::after {
+  border-top: 0;
+  bottom: -10%;
+}
+
+.btn-val span {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 120%;
+  height: 110%;
+  background-color: rgb(15, 25, 35);
+  transform: translateX(-105%) skew(-10deg);
+  transition: 0.4s ease;
+}
+
+.btn-val:hover span {
+  transform: translateX(-5%) skew(-10deg);
+}
